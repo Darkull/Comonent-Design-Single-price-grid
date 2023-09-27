@@ -37,6 +37,9 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
+  box-shadow: 0 2px 10px rgba(1, 1, 1, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .first-row {
@@ -107,6 +110,13 @@ span {
   font-weight: 700;
   background-color: hsl(71, 73%, 54%);
   margin-top: 2rem;
+  margin-left: 1.5rem;
+  box-shadow: 0 2px 10px rgba(1, 1, 1, 0.1);
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: hsl(71, 68%, 50%);
 }
 
 .second-row-second-column {
@@ -127,4 +137,38 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #4abebd;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+footer p a:hover {
+  color: #2bb3b1;
+}
+footer p a:active {
+  color: #9775fa;
+}
+
+@media (max-width: 740px) {
+  main {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(3, auto);
+  }
 }
